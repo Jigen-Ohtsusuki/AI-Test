@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Educational Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>EduGenius AI</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#ai-tutor">AI Tutor</a></li>
+                <li><a href="#quiz-generator">Quiz Generator</a></li>
+                <li><a href="#essay-grading">Essay Grading</a></li>
+                <li><a href="#career-rec">Career Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <div class="welcome-card">
+                    <h2>Welcome to EduGenius AI</h2>
+                    <p>Your personalized AI-powered educational assistant designed to help you learn, practice, and grow.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-robot"></i>
+                            <h3>AI Tutor</h3>
+                            <p>Get instant answers to your educational questions</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-question-circle"></i>
+                            <h3>Smart Quiz Generator</h3>
+                            <p>Test your knowledge with AI-generated quizzes</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-file-alt"></i>
+                            <h3>Essay Grading</h3>
+                            <p>Receive instant feedback on your essays</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>Career Guidance</h3>
+                            <p>Discover careers that match your interests</p>
+                        </div>
+                    </div>
+                    <button class="cta-button" id="get-started">Get Started</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Tutor Section -->
+        <section id="ai-tutor" class="section">
+            <div class="container">
+                <h2>AI Tutor</h2>
+                <p>Ask any educational question, and our AI will provide a helpful answer.</p>
+                
+                <div class="input-container">
+                    <textarea id="tutor-question" placeholder="e.g., 'Explain photosynthesis in simple terms' or 'How do I solve quadratic equations?'"></textarea>
+                    <button id="ask-tutor" class="primary-button">
+                        <span>Ask Question</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                
+                <div id="tutor-response" class="response-area">
+                    <div class="response-placeholder">Your AI tutor's response will appear here...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Generator Section -->
+        <section id="quiz-generator" class="section">
+            <div class="container">
+                <h2>Smart Quiz Generator</h2>
+                <p>Generate quiz questions to test your knowledge on any subject.</p>
+                
+                <div class="input-container">
+                    <input type="text" id="quiz-topic" placeholder="Enter a subject (e.g., 'World History', 'Biology')">
+                    <button id="generate-quiz" class="primary-button">
+                        <span>Generate Quiz</span>
+                        <i class="fas fa-sync-alt"></i>
+                    </button>
+                </div>
+                
+                <div id="quiz-question" class="response-area">
+                    <div class="response-placeholder">Your quiz question will appear here...</div>
+                </div>
+                
+                <div id="quiz-answer-section" class="hidden">
+                    <div class="radio-group">
+                        <label><input type="radio" name="quiz-answer" value="A"> A</label>
+                        <label><input type="radio" name="quiz-answer" value="B"> B</label>
+                        <label><input type="radio" name="quiz-answer" value="C"> C</label>
+                        <label><input type="radio" name="quiz-answer" value="D"> D</label>
+                    </div>
+                    <button id="check-answer" class="secondary-button">Check Answer</button>
+                    <div id="answer-feedback" class="response-area hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Essay Grading Section -->
+        <section id="essay-grading" class="section">
+            <div class="container">
+                <h2>Essay Grading System</h2>
+                <p>Submit your essay for instant AI feedback and grading.</p>
+                
+                <div class="input-container">
+                    <textarea id="essay-text" placeholder="Paste your essay here (minimum 100 words)..."></textarea>
+                    <div class="essay-options">
+                        <select id="essay-subject">
+                            <option value="">Select subject (optional)</option>
+                            <option value="english">English</option>
+                            <option value="history">History</option>
+                            <option value="science">Science</option>
+                            <option value="social-studies">Social Studies</option>
+                        </select>
+                        <select id="grade-level">
+                            <option value="">Select grade level (optional)</option>
+                            <option value="middle-school">Middle School</option>
+                            <option value="high-school">High School</option>
+                            <option value="college">College</option>
+                        </select>
+                    </div>
+                    <button id="grade-essay" class="primary-button">
+                        <span>Grade Essay</span>
+                        <i class="fas fa-check"></i>
+                    </button>
+                </div>
+                
+                <div id="essay-feedback" class="response-area">
+                    <div class="response-placeholder">Essay feedback will appear here...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Recommendation Section -->
+        <section id="career-rec" class="section">
+            <div class="container">
+                <h2>Career Recommendation System</h2>
+                <p>Discover career paths based on your interests and skills.</p>
+                
+                <div class="input-container">
+                    <textarea id="career-interests" placeholder="Describe your interests, skills, and subjects you enjoy (e.g., 'I enjoy solving problems, working with computers, and learning about science')"></textarea>
+                    <button id="get-careers" class="primary-button">
+                        <span>Get Recommendations</span>
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                
+                <div id="career-results" class="response-area">
+                    <div class="response-placeholder">Career recommendations will appear here...</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 EduGenius AI. All rights reserved.</p>
+            <p>Powered by Hugging Face API</p>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="hidden">
+        <div class="spinner"></div>
+        <p>Processing your request...</p>
+    </div>
+
+    <!-- Error Modal -->
+    <div id="error-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Error</h3>
+            <p id="error-message">Something went wrong. Please try again.</p>
+            <button id="error-ok" class="secondary-button">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
